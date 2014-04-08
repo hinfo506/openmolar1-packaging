@@ -1,3 +1,17 @@
+openmolar (0.5.0-beta23-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream release (beta22 had a serious issue)
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Tue, 08 Apr 2014 18:32:15 +0100
+
+
+openmolar (0.5.0-beta22-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream release
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Tue, 08 Apr 2014 17:38:25 +0100
+
+
 openmolar (0.5.0-beta21-0~__DIST__) __DIST__; urgency=low
 
   * New Upstream release
