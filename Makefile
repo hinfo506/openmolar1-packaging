@@ -55,7 +55,7 @@ DIST_DIR=$(HEAD)dist/
 VERSION=`$(BUILD_SCRIPTS_DIR)get_version.py`
 
 TARBALL_DIR=$(HEAD)tarballs/
-TARBALL = $(shell ls -t $(TARBALL_DIR) | grep .tar.gz | head -n1)
+TARBALL = $(shell ls -t $(TARBALL_DIR) | grep .tar.gz$$ | head -n1)
 UNTARRED = $(shell echo $(TARBALL) | sed s/.tar.gz//)
 ORIG = $(shell echo $(UNTARRED).orig.tar.gz | sed s/openmolar-/openmolar_/)
 
@@ -164,3 +164,4 @@ test:
 	@echo DEB_BUILDS_DIR = $(DEB_BUILDS_DIR)
 	@echo changelog = $(CHANGELOG)
 	@echo tarball = $(TARBALL)
+	@echo tmpdir = $(TMP_DIR)

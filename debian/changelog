@@ -1,3 +1,24 @@
+openmolar (0.5.1-beta26-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Wed, 09 Apr 2014 13:03:19 +0100
+
+
+openmolar (0.5.0-beta25-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Wed, 09 Apr 2014 10:50:25 +0100
+
+
+openmolar (0.5.0-beta24-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream release (fixes childsmile block caused by NHS website being down)
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Tue, 08 Apr 2014 22:16:35 +0100
+
+
 openmolar (0.5.0-beta23-0~__DIST__) __DIST__; urgency=low
 
   * New Upstream release (beta22 had a serious issue)
