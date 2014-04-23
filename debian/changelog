@@ -1,3 +1,24 @@
+openmolar (0.5.3-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 23 Apr 2014 15:39:03 +0100
+
+
+openmolar (0.5.2-1-g717533a-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 23 Apr 2014 13:56:33 +0100
+
+
+openmolar (0.5.1-beta26-7-g6db61b8-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <rowinggolfer@googlemail.com>  Tue, 22 Apr 2014 12:18:21 +0100
+
+
 openmolar (0.5.1-beta26-0~__DIST__) __DIST__; urgency=low
 
   * New Upstream

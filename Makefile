@@ -22,13 +22,14 @@ EXAMPLES
 
 	make changelog
 		update the changelog in the template debian directory
-
 	make deb DIST=stable
 		debian packages for debian stable (squeeze)
 	make deb DIST=precise 
 		create a debian binary package for ubuntu precise (12.04).
 	make debs 
 		makes debian package for all distributions and architectures
+	make nightly_builds
+		should be self explanatory?
 
 endef
 	
@@ -65,14 +66,18 @@ TMP_DIR=$(HEAD)tmp/
 #                                                                              #
 DEB_CONF_DIR=$(BUILD_SCRIPTS_DIR)debian/
 DEB_BUILDS_DIR=$(BUILDS_DIR)debs/$(DIST)/
-
-DEBDISTS = unstable testing stable oldstable saucy raring quantal precise
-
+DEBDISTS = unstable testing stable oldstable
 CHANGELOG=$(DEB_BUILDS_DIR)$(shell ls -t $(DEB_BUILDS_DIR) | grep changes | head -n1)
-
 #                                                                              #
 ##################  Debian packaging ends  #####################################
 
+
+##################  Ubuntu Packaging Stuff #####################################
+#            Updated April 2014 (EOL for 13.04 and 12.10)                      #
+#            Also update ~/.pbuilderrc					       #
+DEBDISTS += trusty saucy precise
+#                                                                              #
+##################  Ubuntu packaging ends  #####################################
 
 .phony:
 	make help
@@ -85,9 +90,9 @@ clean_tmp:
 	rm -rf $(TMP_DIR)*
 
 changelog:
-	# call my changelog gui
-	$(BUILD_SCRIPTS_DIR)deb_maker.py -p$(PACKAGE) -s$(TARBALL_DIR) -d$(DEB_CONF_DIR)
-	
+	@echo "call deb_maker.py -p$(PACKAGE) -s$(TARBALL_DIR) -d$(DEB_CONF_DIR)"
+	$(BUILD_SCRIPTS_DIR)deb_maker.py -p$(PACKAGE) -s$(TARBALL_DIR) -d$(DEB_CONF_DIR) $(AUTO)
+
 deb:
 	make clean_tmp
 
@@ -139,7 +144,11 @@ pushdebs:
 	)
 	cd ~/www/repos/apt/debian ;\
 	reprepro export
-	
+
+nightly_builds:
+	make AUTO=--auto changelog
+	make debs
+
 update_pbuilder:
 	$(foreach dist, $(DEBDISTS), \
 		sudo DIST=${dist} ARCH=amd64 pbuilder --update --architecture amd64 \
@@ -158,6 +167,7 @@ test:
 	@if [ $(NEW_CHANGELOG) = 'true' ]; then \
 		echo changelog WILL be updated; \
 	fi
+	@echo DEBDISTS = $(DEBDISTS)
 	@echo debconfdir = $(DEB_CONF_DIR)
 	@echo Head = $(HEAD)
 	@echo Dist = $(DIST)

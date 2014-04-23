@@ -143,14 +143,14 @@ def main():
     for file_ in os.listdir(options.sources_dir):
         if re.match("%s-(.*)\.tar\.gz$" % options.package, file_):
             tarballs.append(file_)
-    tarballs = sorted(tarballs, reverse=True)
+    tarballs.reverse()
 
     chosen = tarballs[0]
     version = re.match(
         "%s-(.*)\.tar\.gz$" % options.package, chosen).groups()[0]
 
     new_changes = new_changelog(options.package, version,
-                                "Neil Wallace <rowinggolfer@googlemail.com>")
+                                "Neil Wallace <neil@openmolar.com>")
 
     changelog = "%s\n\n%s" % (new_changes, changelog)
 
@@ -159,7 +159,7 @@ def main():
         if not result:
             sys.exit("User aborted the changelog gui")
     else:
-        comments = changelog.replace("{COMMENTS}", "auto build", 1)
+        changelog = changelog.replace("{COMMENTS}", "auto build", 1)
 
     f = open(os.path.join(options.deb_dir, "changelog"), "w")
     f.write(changelog)
