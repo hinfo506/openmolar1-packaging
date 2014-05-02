@@ -1,3 +1,38 @@
+openmolar (0.5.5-1~__DIST__) __DIST__; urgency=low
+
+  * test of new control file
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 02 May 2014 10:29:08 +0100
+
+
+openmolar (0.5.5-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 02 May 2014 10:13:01 +0100
+
+
+openmolar (0.5.4-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 01 May 2014 22:34:49 +0100
+
+
+openmolar (0.5.3-5-g49179d7-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 01 May 2014 08:55:37 +0100
+
+
+openmolar (0.5.3-4-g5b045f5-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 29 Apr 2014 17:49:49 +0100
+
+
 openmolar (0.5.3-3-g6e56c97-0~__DIST__) __DIST__; urgency=low
 
   * auto build

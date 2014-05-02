@@ -1,18 +1,21 @@
 Source: openmolar
 Section: misc
 Priority: extra
-Maintainer: Neil Wallace <rowinggolfer@googlemail.com>
-Build-Depends: python, debhelper (>= 7)
+Maintainer: Neil Wallace <neil@openmolar.com>
+Build-Depends: debhelper (>= 7), python-all
 Homepage: http://www.openmolar.com
 Vcs-browser: https://github.com/rowinggolfer/openmolar1
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: openmolar-orig
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-qt4 (>=4.4.0), python-mysqldb, xdg-utils, python-qscintilla2
+Depends: ${misc:Depends}, ${python:Depends}
+         ,python-mysqldb
+         ,python-qscintilla2
+         ,python-qt4 (>=4.4.0)
+         ,xdg-utils
+Suggests: mysql-server | mariadb-server
+X-Python-Version: >= 2.6
 Replaces: openmolar
-XB-Python-Version: ${python:Versions}
 Description: Dental Practice Management Software
- see http://openmolar.com for project description and links
- .
- irc channel (for devs and users) is #openmolar on freenode.net
+ Openmolar is a full featured dental practice management application.
