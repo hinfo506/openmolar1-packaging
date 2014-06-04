@@ -1,3 +1,115 @@
+openmolar (0.5.5-27-g7c8f16b-0~__DIST__) __DIST__; urgency=low
+
+  * minor upstream release, and taking opportunity to create a transitional package for those who have installed openmolar-orig. Package name is now openmolar to tie in with the debian package. 
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 03 Jun 2014 23:23:59 +0100
+
+
+openmolar (0.5.5-26-gbb33f42-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 03 Jun 2014 22:00:36 +0100
+
+
+openmolar (0.5.5-23-gede42f3-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 30 May 2014 16:01:35 +0100
+
+
+openmolar (0.5.5-23-gede42f3-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 30 May 2014 16:01:23 +0100
+
+
+openmolar (0.5.5-23-gede42f3-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 30 May 2014 14:00:22 +0100
+
+
+openmolar (0.5.5-23-gede42f3-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 30 May 2014 12:16:13 +0100
+
+
+openmolar (0.5.5-22-ga6ef023-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 30 May 2014 11:46:57 +0100
+
+
+openmolar (0.5.5-21-g5ec8138-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 29 May 2014 10:17:06 +0100
+
+
+openmolar (0.5.5-19-g3b469c0-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 28 May 2014 16:58:12 +0100
+
+
+openmolar (0.5.5-18-g98109c4-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 28 May 2014 16:08:42 +0100
+
+
+openmolar (0.5.5-16-ga5ea534-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 28 May 2014 10:06:03 +0100
+
+
+openmolar (0.5.5-13-g8cdeba7-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 27 May 2014 13:30:45 +0100
+
+
+openmolar (0.5.5-12-geed2e2e-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 21 May 2014 22:51:13 +0100
+
+
+openmolar (0.5.5-11-g7b7ebe6-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 21 May 2014 13:55:07 +0100
+
+
+openmolar (0.5.5-5-gbfb9b76-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 20 May 2014 02:27:35 +0100
+
+
+openmolar (0.5.5-1-g6b1c356-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 16 May 2014 15:41:19 +0100
+
+
 openmolar (0.5.5-1~__DIST__) __DIST__; urgency=low
 
   * test of new control file
