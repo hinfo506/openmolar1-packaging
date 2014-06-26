@@ -66,7 +66,7 @@ TMP_DIR=$(HEAD)tmp/
 #                                                                              #
 DEB_CONF_DIR=$(BUILD_SCRIPTS_DIR)debian/
 DEB_BUILDS_DIR=$(BUILDS_DIR)debs/$(DIST)/
-DEBDISTS = unstable testing stable oldstable
+DEBDISTS = testing unstable stable oldstable
 CHANGELOG=$(DEB_BUILDS_DIR)$(shell ls -t $(DEB_BUILDS_DIR) | grep changes | head -n1)
 #                                                                              #
 ##################  Debian packaging ends  #####################################

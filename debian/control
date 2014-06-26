@@ -16,17 +16,7 @@ Depends: ${misc:Depends}, ${python:Depends}
          ,xdg-utils
 Suggests: mysql-server | mariadb-server
 X-Python-Version: >= 2.6
-Replaces: openmolar-orig (<< 0.5.5-27~)
-Breaks: openmolar-orig (<< 0.5.5-27~)
+Replaces: openmolar-orig (<< 0.5.5-27-g7c8f16b-0)
+Breaks: openmolar-orig (<< 0.5.5-27-g7c8f16b-0)
 Description: Dental Practice Management Software
  Openmolar is a full featured dental practice management application.
-
-Package: openmolar-orig
-Architecture: all
-Priority: extra
-Section: oldlibs
-Depends: openmolar
-Description: Dental Practice Management Software
- Openmolar is a full featured dental practice management application.
- .
- This is an empty package meant for transition.
