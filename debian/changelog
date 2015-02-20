@@ -1,3 +1,122 @@
+openmolar (0.6.2-0~__DIST__) __DIST__; urgency=low
+
+  * New Upstream Release.
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 14 Jan 2015 12:48:03 +0000
+
+
+openmolar (0.6.1-16-ge6d019d-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 13 Jan 2015 09:17:35 +0000
+
+
+openmolar (0.6.1-11-g9a954f6-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 22 Oct 2014 11:06:25 +0100
+
+
+openmolar (0.6.1-10-g883321b-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 22 Oct 2014 10:04:45 +0100
+
+
+openmolar (0.6.1-9-gda45f61-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 20 Oct 2014 17:27:44 +0100
+
+
+openmolar (0.6.1-8-g64c6419-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 08 Oct 2014 13:20:01 +0100
+
+
+openmolar (0.6.1-6-ge836c5b-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 06 Oct 2014 15:58:39 +0100
+
+
+openmolar (0.6.1-5-gcf989a1-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 03 Oct 2014 15:48:47 +0100
+
+
+openmolar (0.6.1-2-gcc2a8fe-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 01 Oct 2014 23:40:25 +0100
+
+
+openmolar (0.6.1-1-gcc29d92-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 10 Sep 2014 15:51:43 +0100
+
+
+openmolar (0.6.1-1~__DIST__) __DIST__; urgency=low
+
+  * New Upstream Tarball - Minor version increment.
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 04 Sep 2014 11:03:36 +0100
+
+
+openmolar (0.6.0-9-g1832912-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 26 Aug 2014 13:22:21 +0100
+
+
+openmolar (0.6.0-6-g2609b5d-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 19 Aug 2014 10:03:46 +0100
+
+
+openmolar (0.6.0-5-g6edf2c6-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 19 Aug 2014 10:00:01 +0100
+
+
+openmolar (0.6.0-4-g49f3eff-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 30 Jul 2014 11:29:12 +0100
+
+
+openmolar (0.6.0-3-g46412df-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 29 Jul 2014 10:06:35 +0100
+
+
+openmolar (0.6.0-1-g24dff42-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 03 Jul 2014 12:07:41 +0100
+
+
 openmolar (0.6.0-0~__DIST__) __DIST__; urgency=low
 
   * Upstream Release of 0.6.0

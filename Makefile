@@ -75,7 +75,7 @@ CHANGELOG=$(DEB_BUILDS_DIR)$(shell ls -t $(DEB_BUILDS_DIR) | grep changes | head
 ##################  Ubuntu Packaging Stuff #####################################
 #            Updated April 2014 (EOL for 13.04 and 12.10)                      #
 #            Also update ~/.pbuilderrc					       #
-DEBDISTS += trusty saucy precise
+DEBDISTS += utopic trusty saucy precise
 #                                                                              #
 ##################  Ubuntu packaging ends  #####################################
 
