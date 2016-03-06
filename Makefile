@@ -73,9 +73,9 @@ CHANGELOG=$(DEB_BUILDS_DIR)$(shell ls -t $(DEB_BUILDS_DIR) | grep changes | head
 
 
 ##################  Ubuntu Packaging Stuff #####################################
-#            Updated May 2015                                                  #
+#            Updated Nov 2015                                                  #
 #            Also update ~/.pbuilderrc					                       #
-DEBDISTS += vivid utopic trusty precise
+DEBDISTS += wily vivid trusty
 #                                                                              #
 ##################  Ubuntu packaging ends  #####################################
 
