@@ -1,3 +1,80 @@
+openmolar (0.7.1-2~__DIST__) __DIST__; urgency=low
+
+  * Upstream release.
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 16 Mar 2016 17:43:36 +0000
+
+
+openmolar (0.7.1-1~__DIST__) __DIST__; urgency=low
+
+  * minor patch to the release. I have simply rebuilt the tarball.
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 16 Mar 2016 17:43:36 +0000
+
+
+openmolar (0.7.1-0~__DIST__) __DIST__; urgency=low
+
+  * New upstream release
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 15 Mar 2016 21:42:04 +0000
+
+
+openmolar (0.7.0-beta-8-gfbef2b4-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 14 Mar 2016 21:26:58 +0000
+
+
+openmolar (0.7.0-beta-6-g3814600-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Fri, 11 Mar 2016 13:02:04 +0000
+
+
+openmolar (0.7.0-beta-2-gef40f22-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 10 Mar 2016 12:36:44 +0000
+
+
+openmolar (0.7.0-beta-1-gdb96810-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 09 Mar 2016 11:34:27 +0000
+
+
+openmolar (0.7.0-beta-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Wed, 09 Mar 2016 02:22:45 +0000
+
+
+openmolar (0.7.0-alpha-5-ge078c65-0~__DIST__) __DIST__; urgency=low
+
+  * auto build
+
+ -- Neil Wallace <neil@openmolar.com>  Tue, 08 Mar 2016 16:29:07 +0000
+
+
+openmolar (0.7.0-alpha-2-gfb51ab5-1~__DIST__) __DIST__; urgency=low
+
+  * Error in debian/control python3-pyqt4 package name was incorrect
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 07 Mar 2016 12:58:52 +0000
+
+
+openmolar (0.7.0-alpha-2-gfb51ab5-0~__DIST__) __DIST__; urgency=low
+
+  * Trial build of 0.7.0-alpha, which has moved to python3.
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 07 Mar 2016 09:01:13 +0000
+
+
 openmolar (0.6.3-0~__DIST__) __DIST__; urgency=low
 
   * Upstream release of version 0.6.3

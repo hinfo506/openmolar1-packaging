@@ -1,3 +1,6 @@
-#!/usr/bin/make -f
+export DH_VERBOSE=1
+export PYBUILD_NAME=openmolar
+export PYBUILD_DISABLE_python3=test
+
 %:
-	dh $@ --buildsystem=python_distutils --with=python2
+	dh $@ --with=python3 --buildsystem=pybuild

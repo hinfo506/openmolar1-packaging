@@ -66,16 +66,18 @@ TMP_DIR=$(HEAD)tmp/
 #                                                                              #
 DEB_CONF_DIR=$(BUILD_SCRIPTS_DIR)debian/
 DEB_BUILDS_DIR=$(BUILDS_DIR)debs/$(DIST)/
-DEBDISTS = testing unstable stable oldstable
+
+# removed oldstable 11th March 2016
+DEBDISTS = testing unstable stable
 CHANGELOG=$(DEB_BUILDS_DIR)$(shell ls -t $(DEB_BUILDS_DIR) | grep changes | head -n1)
 #                                                                              #
 ##################  Debian packaging ends  #####################################
 
 
 ##################  Ubuntu Packaging Stuff #####################################
-#            Updated Nov 2015                                                  #
+#            Updated Mar 2016                                                  #
 #            Also update ~/.pbuilderrc					                       #
-DEBDISTS += wily vivid trusty
+DEBDISTS += xenial wily trusty
 #                                                                              #
 ##################  Ubuntu packaging ends  #####################################
 
