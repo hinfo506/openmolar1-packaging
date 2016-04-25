@@ -2,3 +2,8 @@
 *~
 tmp/
 builds/
+.ropeproject
+*.exe
+*.msi
+*.wixobj
+*.wixpdb
