@@ -1,3 +1,17 @@
+openmolar (0.8.0-29-g9a9dc17-0~__DIST__) __DIST__; urgency=low
+
+  * Upstream changes which affect the installation. The python package openmolar is now a pure python package as all resource files are now placed in /usr/share/openmolar/resources. 
+
+ -- Neil Wallace <neil@openmolar.com>  Mon, 25 Apr 2016 15:56:24 +0100
+
+
+openmolar (0.8.0-22-g7a78bfd-0~__DIST__) __DIST__; urgency=low
+
+  * Upstream changes, including a new distutils setup script
+
+ -- Neil Wallace <neil@openmolar.com>  Thu, 21 Apr 2016 23:37:34 +0100
+
+
 openmolar (0.8.0-0~__DIST__) __DIST__; urgency=low
 
   * Upstream release of openmolar using qt5. Dependencies have changed accordingly. In addition, pyuic5 and pyrcc5 are now called during the debian build. This avoids issues when the scripts on the developers machine is a later version than the distribution being targeted.
