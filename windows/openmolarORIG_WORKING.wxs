@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- set the openmolar version here -->
+<?define ProductVersion="0.6.4"?>
+
+<!-- never change this uuid -->
+<?define ProductUpgradeCode="EC1221EC-2EB2-4526-8869-F24C8841C999"?>
+
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="*" UpgradeCode="$(var.ProductUpgradeCode)" Name="OpenMolar" Version="$(var.ProductVersion)" Manufacturer="OpenMolar" Language="1033">
+        <Package InstallerVersion="200" Compressed="yes" Comments="Windows Installer Package"/>
+        <Media Id="1" Cabinet="openmolar.cab" EmbedCab="yes"/>
+
+        <!-- Define icons (ID should not be longer than 18 chars and must end with ".exe") -->
+        <Icon Id="Icon.exe" SourceFile="openmolar.ico"/>
+
+        <!-- Set properties for add/remove programs -->
+        <Property Id="ARPPRODUCTICON" Value="Icon.exe"/>
+        <Property Id="ARPHELPLINK" Value="http://openmolar.com"/>
+        <Property Id="ARPURLINFOABOUT" Value="http://openmolar.com"/>
+        <Property Id="ARPNOREPAIR" Value="1"/>
+        <Property Id="ARPNOMODIFY" Value="1"/>
+        <Upgrade Id="$(var.ProductUpgradeCode)">
+            <UpgradeVersion Minimum="$(var.ProductVersion)" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
+            <UpgradeVersion Minimum="0.0.0" Maximum="$(var.ProductVersion)" IncludeMinimum="yes" IncludeMaximum="no" Property="OLDERVERSIONBEINGUPGRADED"/>	  
+        </Upgrade>
+        <Condition Message="A newer version of this software is already installed.">
+            NOT NEWERVERSIONDETECTED
+        </Condition>
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder">
+
+                <Directory Id="INSTALLDIR" Name="openmolar">
+                    <Component Id="MainExecutable" Guid="63C30814-E8BF-4C22-B551-63ADAD252774">
+                        <File Id="OpenMolar.exe" Source="openmolar.exe" KeyPath="yes" Checksum="yes">
+                        </File>
+                    </Component>
+
+                    <Directory Id="ResourcesDIR" Name="resources">
+                    <!-- RESOURCES (do not edit these, they are added by add_resources.py-->
+
+                        <Component Id="resource_component1" Guid="887B0AB3-3C7A-4AAC-8D42-767876A1A94B">
+                            <File Id="resource_file1" Source="resources\style.css" KeyPath="yes" Checksum="yes" />
+                        </Component>
+
+                    <!-- /RESOURCES -->
+                    </Directory>
+
+                </Directory>
+            </Directory>
+
+            <Directory Id="ProgramMenuFolder">
+                <Directory Id="ProgramMenuSubfolder" Name="OpenMolar">
+                    <Component Id="ApplicationShortcuts" Guid="34486FA2-FF2D-433F-B0E9-5DEA3BE1732F">
+                        <Shortcut Id="ApplicationShortcut1" Name="Openmolar" Description="Dental Practice Management Suite" 
+                                    Target="[INSTALLDIR]openmolar.exe" WorkingDirectory="INSTALLDIR"/>
+                        <RegistryValue Root="HKCU" Key="Software\OpenMolar\OpanMolar" 
+                                    Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+                        <RemoveFolder Id="ProgramMenuSubfolder" On="uninstall"/>
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+
+      <InstallExecuteSequence>
+         <RemoveExistingProducts After="InstallValidate"/>
+      </InstallExecuteSequence>
+ 
+        <Feature Id="DefaultFeature" Level="1">
+            <ComponentRef Id="MainExecutable"/>
+            <ComponentRef Id="ApplicationShortcuts"/>
+            <ComponentRef Id="resource_component1"/>
+        </Feature>
+    </Product>
+</Wix>

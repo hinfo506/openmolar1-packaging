@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wii">
+  <Product Id="*" Language="1033" Manufacturer="OpenMolar" Name="OpenMolar" UpgradeCode="3E52AFB20C5511E6B04339339F36C610" Version="0.8.0-37-g23a4e0d">
+    <Package Comments="Windows Installer Package" Compressed="yes" InstallerVersion="200"/>
+    <Media Cabinet="openmolar.cab" EmbedCab="yes" Id="1"/>
+    <!-- Define icons (ID should not be longer than 18 chars and must end with ".exe") -->
+    <Icon Id="Icon.exe" SourceFile="openmolar.ico"/>
+    <!-- Set properties for add/remove programs -->
+    <Property Id="ARPPRODUCTICON" Value="Icon.exe"/>
+    <Property Id="ARPHELPLINK" Value="http://openmolar.com"/>
+    <Property Id="ARPURLINFOABOUT" Value="http://openmolar.com"/>
+    <Property Id="ARPNOREPAIR" Value="1"/>
+    <Property Id="ARPNOMODIFY" Value="1"/>
+    <Upgrade Id="3E52AFB20C5511E6B04339339F36C610">
+      <UpgradeVersion Minimum="0.8.0-37-g23a4e0d" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
+      <UpgradeVersion IncludeMaximum="no" IncludeMinimum="yes" Maximum="0.8.0-37-g23a4e0d" Minimum="0.0.0" Property="OLDERVERSIONBEINGUPGRADED"/>
+    </Upgrade>
+    <Condition Message="A newer version of this software is already installed.">
+            NOT NEWERVERSIONDETECTED
+        </Condition>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLDIR" Name="openmolar">
+          <Component Guid="63C30814-E8BF-4C22-B551-63ADAD252774" Id="MainExecutable">
+            <File Checksum="yes" Id="OpenMolar.exe" KeyPath="yes" Source="openmolar.exe">
+                        </File>
+          </Component>
+          <Directory Id="LocaleDIR" Name="locale">
+            <Component Guid="94C572A7107B11E6971FA417311917F5" Id="data_component1">
+              <File Checksum="yes" Id="data_file1" KeyPath="yes" Source="src/openmolar/locale/af.po"/>
+            </Component>
+            <Component Guid="94C572A8107B11E6971FA417311917F5" Id="data_component2">
+              <File Checksum="yes" Id="data_file2" KeyPath="yes" Source="src/openmolar/locale/da.po"/>
+            </Component>
+          </Directory>
+          <Directory Id="ResourcesDIR" Name="resources">
+            <Component Guid="94C572AA107B11E6971FA417311917F5" Id="data_component1">
+              <File Checksum="yes" Id="data_file1" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/appointment_shortcuts.xml"/>
+            </Component>
+            <Component Guid="94C572AB107B11E6971FA417311917F5" Id="data_component2">
+              <File Checksum="yes" Id="data_file2" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/appt_ov.png"/>
+            </Component>
+            <Directory Guid="94C572AC107B11E6971FA417311917F5" id="resource_folder2" namme="gp17-1">
+              <Component Guid="94C572AD107B11E6971FA417311917F5" Id="data_component3">
+                <File Checksum="yes" Id="data_file3" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/gp17-1/back.png"/>
+              </Component>
+              <Component Guid="94C572AE107B11E6971FA417311917F5" Id="data_component4">
+                <File Checksum="yes" Id="data_file4" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/gp17-1/front.png"/>
+              </Component>
+            </Directory>
+            <Directory Guid="94C572AF107B11E6971FA417311917F5" id="resource_folder3" namme="gp17">
+              <Component Guid="94C572B0107B11E6971FA417311917F5" Id="data_component5">
+                <File Checksum="yes" Id="data_file5" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/gp17/back.jpg"/>
+              </Component>
+              <Component Guid="94C572B1107B11E6971FA417311917F5" Id="data_component6">
+                <File Checksum="yes" Id="data_file6" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/gp17/front.jpg"/>
+              </Component>
+            </Directory>
+            <Directory Guid="94C572B2107B11E6971FA417311917F5" id="resource_folder4" namme="icons">
+              <Component Guid="94C572B3107B11E6971FA417311917F5" Id="data_component7">
+                <File Checksum="yes" Id="data_file7" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/icons/Speaker_Icon.svg"/>
+              </Component>
+              <Component Guid="94C572B4107B11E6971FA417311917F5" Id="data_component8">
+                <File Checksum="yes" Id="data_file8" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/icons/action.png"/>
+              </Component>
+            </Directory>
+            <Directory Guid="94C572B5107B11E6971FA417311917F5" id="resource_folder5" namme="teeth">
+              <Component Guid="94C572B6107B11E6971FA417311917F5" Id="data_component9">
+                <File Checksum="yes" Id="data_file9" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/teeth/lr1.png"/>
+              </Component>
+              <Component Guid="94C572B7107B11E6971FA417311917F5" Id="data_component10">
+                <File Checksum="yes" Id="data_file10" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/teeth/ll1.png"/>
+              </Component>
+            </Directory>
+            <Directory Guid="94C572B8107B11E6971FA417311917F5" id="resource_folder6" namme="feescales">
+              <Component Guid="94C572B9107B11E6971FA417311917F5" Id="data_component11">
+                <File Checksum="yes" Id="data_file11" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/feescales/example_feescale.xml"/>
+              </Component>
+              <Component Guid="94C572BA107B11E6971FA417311917F5" Id="data_component12">
+                <File Checksum="yes" Id="data_file12" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/feescales/feescale_schema.xsd"/>
+              </Component>
+            </Directory>
+            <Directory Guid="94C572BB107B11E6971FA417311917F5" id="resource_folder7" namme="phrasebook">
+              <Component Guid="94C572BC107B11E6971FA417311917F5" Id="data_component13">
+                <File Checksum="yes" Id="data_file13" KeyPath="yes" Source="/home/neil/openmolar/openmolar1/src/openmolar/resources/phrasebook/phrasebook.xsd"/>
+              </Component>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuSubfolder" Name="OpenMolar">
+          <Component Guid="34486FA2-FF2D-433F-B0E9-5DEA3BE1732F" Id="ApplicationShortcuts">
+            <Shortcut Description="Dental Practice Management Suite" Id="ApplicationShortcut1" Name="Openmolar" Target="[INSTALLDIR]openmolar.exe" WorkingDirectory="INSTALLDIR"/>
+            <RegistryValue Key="Software\OpenMolar\OpanMolar" KeyPath="yes" Name="installed" Root="HKCU" Type="integer" Value="1"/>
+            <RemoveFolder Id="ProgramMenuSubfolder" On="uninstall"/>
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallValidate"/>
+    </InstallExecuteSequence>
+    <Feature Id="DefaultFeature" Level="1">
+      <ComponentRef Id="MainExecutable"/>
+      <ComponentRef Id="ApplicationShortcuts"/>
+      <ComponentRef Id="resource_file1"/>
+    </Feature>
+  </Product>
+</Wix>

@@ -50,8 +50,6 @@ BUILD_SCRIPTS_DIR := $(abspath $(dir $(firstword $(CURRENT_MAKEFILE_LIST))))/
 HEAD = $(shell $(BUILD_SCRIPTS_DIR)get_git_branch.py)/
 BUILDS_DIR=$(HEAD)builds/
 
-DIST_DIR=$(HEAD)dist/
-
 #VERSION=`git describe | sed s/v//`
 VERSION=`$(BUILD_SCRIPTS_DIR)get_version.py`
 
