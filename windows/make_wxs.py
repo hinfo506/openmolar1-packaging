@@ -19,9 +19,9 @@ def source_folders():
 
 
 path = os.path.abspath(os.path.dirname(__file__))
-if not os.path.isfile("openmolar.exe"):
-    sys.exit("Please put openmolar.exe into this directory %s!\nQUITTING" %
-             path)
+EXE_PATH = os.path.join(path, "dist", "openmolar.exe")
+if not os.path.isfile(EXE_PATH):
+    sys.exit("Cannot find %s!\nQUITTING" % EXE_PATH)
 
 # this script should be run on windows, but I test on debian.
 if platform.system() == "Windows":
@@ -52,12 +52,12 @@ print("running make_wxs\nutilising DATA_FILES from %s" % setup.__file__)
 UPGRADE_GUID = "3E52AFB20C5511E6B04339339F36C610"
 
 
-m = re.match("(\d+).(\d+).(\d+)-(\d+)", VERSION)
+m = re.match("(\d+).(\d+).(\d+)-", VERSION)
 if not m:
-    sys.exit("VERSION %s should be in the form x.x.x-x\nQUITTING" % VERSION)
+    sys.exit("VERSION %s should be in the form x.x.x-foo\nQUITTING" % VERSION)
 
 version_digits = m.groups()
-VERSION = "%s.%s.%s.%s" % version_digits
+VERSION = "%s.%s.%s.0" % version_digits
 
 RESOURCES_PATH = os.path.abspath(os.path.join(SRCDIR, "src", "openmolar",
                                               "resources"))
@@ -66,13 +66,15 @@ ICON_PATH = os.path.join(RESOURCES_PATH, "icons", "openmolar.ico")
 DIALOG_BITMAP_PATH = os.path.join(RESOURCES_PATH, 'win_install_dialog.bmp')
 BANNER_BITMAP_PATH = os.path.join(RESOURCES_PATH, 'win_install_banner.bmp')
 
-LICENSE_PATH = os.path.abspath(os.path.join(SRCDIR, "license.rtf"))
-EXE_PATH = os.path.abspath(os.path.join(path, "openmolar.exe"))
+LICENSE_PATH = os.path.abspath(os.path.join(path, "license.rtf"))
 
 EXIT_MESSAGE = '''Thank you for installing OpenMolar.
-Please join the openmolar community and contribute to the documentation, the
-source code or translations.
-Please visit http://openmolar.com'''
+
+Please join the openmolar community and contribute
+to the documentation, the source code or
+internationalisation.
+
+Find out more at http://openmolar.com'''
 
 
 def _template():
@@ -156,8 +158,11 @@ def _template():
         <WixVariable Id="WixUIBannerBmp" Value="{{ BANNER_BITMAP_PATH }}" />
         <UIRef Id="WixUI_Minimal" />
         <UIRef Id="WixUI_ErrorProgressText" />
-        <Property ID="WIXUI_EXITDIALOGOPTIONALTEXT"
+
+        <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT"
         Value="{{ EXIT_MESSAGE }}"
+        />
+
         </Product>'''
 
     return ('<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">\n'

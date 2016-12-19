@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Language="1033" Manufacturer="OpenMolar" Name="OpenMolar" UpgradeCode="3E52AFB20C5511E6B04339339F36C610" Version="0.8.0.38">
+  <Product Id="*" Language="1033" Manufacturer="OpenMolar" Name="OpenMolar" UpgradeCode="3E52AFB20C5511E6B04339339F36C610" Version="1.0.16.0">
     <Package Comments="Windows Installer Package for OpenMolar" Compressed="yes" InstallerVersion="200"/>
     <Media Cabinet="openmolar.cab" EmbedCab="yes" Id="1"/>
-    <WixVariable Id="WixUILicenseRtf" Value="E:\openmolar-0.8.0-38-g964eac4-dirty\gpl.rtf"/>
+    <WixVariable Id="WixUILicenseRtf" Value="E:\windows\license.rtf"/>
     <!-- Define icons (ID should not be longer than 18 chars and must end with ".exe") -->
-    <Icon Id="Icon.exe" SourceFile="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\openmolar.ico"/>
+    <Icon Id="Icon.exe" SourceFile="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\openmolar.ico"/>
     <!-- Set properties for add/remove programs -->
     <Property Id="ARPPRODUCTICON" Value="Icon.exe"/>
     <Property Id="ARPHELPLINK" Value="http://openmolar.com"/>
     <Property Id="ARPURLINFOABOUT" Value="http://openmolar.com"/>
     <Property Id="ARPNOREPAIR" Value="1"/>
     <Upgrade Id="3E52AFB20C5511E6B04339339F36C610">
-      <UpgradeVersion Minimum="0.8.0.38" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
-      <UpgradeVersion IncludeMaximum="no" IncludeMinimum="yes" Maximum="0.8.0.38" Minimum="0.0.0" Property="OLDERVERSIONBEINGUPGRADED"/>
+      <UpgradeVersion Minimum="1.0.16.0" OnlyDetect="yes" Property="NEWERVERSIONDETECTED"/>
+      <UpgradeVersion IncludeMaximum="no" IncludeMinimum="yes" Maximum="1.0.16.0" Minimum="0.0.0" Property="OLDERVERSIONBEINGUPGRADED"/>
     </Upgrade>
     <Condition Message="A newer version of this software is already installed.">
             NOT NEWERVERSIONDETECTED
@@ -22,388 +22,405 @@
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLDIR" Name="OpenMolar">
           <Component Guid="63C30814-E8BF-4C22-B551-63ADAD252774" Id="MainExecutable">
-            <File Checksum="yes" Id="OpenMolar.exe" KeyPath="yes" Source="E:\windows\openmolar.exe">
+            <File Checksum="yes" Id="OpenMolar.exe" KeyPath="yes" Source="E:\windows\dist\openmolar.exe">
                         </File>
           </Component>
           <Directory Id="LocaleDIR" Name="locale">
-            <Component Guid="D94C89C0115011E6B5060800279976C8" Id="locale_component1">
-              <File Checksum="yes" Id="locale_file1" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\af.po"/>
-            </Component>
-            <Component Guid="D94C89C1115011E6BC150800279976C8" Id="locale_component2">
-              <File Checksum="yes" Id="locale_file2" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\da.po"/>
-            </Component>
-            <Component Guid="D94C89C2115011E6B1E80800279976C8" Id="locale_component3">
-              <File Checksum="yes" Id="locale_file3" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\de.po"/>
-            </Component>
-            <Component Guid="D94C89C3115011E6AE640800279976C8" Id="locale_component4">
-              <File Checksum="yes" Id="locale_file4" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\el.po"/>
-            </Component>
-            <Component Guid="D94C89C4115011E68AB30800279976C8" Id="locale_component5">
-              <File Checksum="yes" Id="locale_file5" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\en_AU.po"/>
-            </Component>
-            <Component Guid="D94C89C5115011E687440800279976C8" Id="locale_component6">
-              <File Checksum="yes" Id="locale_file6" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\en_GB.po"/>
-            </Component>
-            <Component Guid="D94C89C6115011E68F640800279976C8" Id="locale_component7">
-              <File Checksum="yes" Id="locale_file7" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\es.po"/>
-            </Component>
-            <Component Guid="D94C89C7115011E693650800279976C8" Id="locale_component8">
-              <File Checksum="yes" Id="locale_file8" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\fr.po"/>
-            </Component>
-            <Component Guid="D94C89C8115011E6A8C30800279976C8" Id="locale_component9">
-              <File Checksum="yes" Id="locale_file9" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\hu.po"/>
-            </Component>
-            <Component Guid="D94C89C9115011E690890800279976C8" Id="locale_component10">
-              <File Checksum="yes" Id="locale_file10" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\id.po"/>
-            </Component>
-            <Component Guid="D94C89CA115011E6823A0800279976C8" Id="locale_component11">
-              <File Checksum="yes" Id="locale_file11" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\it.po"/>
-            </Component>
-            <Component Guid="D94C89CB115011E6AF990800279976C8" Id="locale_component12">
-              <File Checksum="yes" Id="locale_file12" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\messages.pot"/>
-            </Component>
-            <Component Guid="D94C89CC115011E68C9C0800279976C8" Id="locale_component13">
-              <File Checksum="yes" Id="locale_file13" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\oc.po"/>
-            </Component>
-            <Component Guid="D94C89CD115011E689AF0800279976C8" Id="locale_component14">
-              <File Checksum="yes" Id="locale_file14" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\pl.po"/>
-            </Component>
-            <Component Guid="D94C89CE115011E68C310800279976C8" Id="locale_component15">
-              <File Checksum="yes" Id="locale_file15" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\pt.po"/>
-            </Component>
-            <Component Guid="D94C89CF115011E6AE0A0800279976C8" Id="locale_component16">
-              <File Checksum="yes" Id="locale_file16" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\ro.po"/>
-            </Component>
-            <Component Guid="D94C89D0115011E6BE820800279976C8" Id="locale_component17">
-              <File Checksum="yes" Id="locale_file17" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\sk.po"/>
-            </Component>
-            <Component Guid="D94C89D1115011E69A180800279976C8" Id="locale_component18">
-              <File Checksum="yes" Id="locale_file18" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\locale\tr.po"/>
-            </Component>
+            <Directory Id="locale_subdir1" Name="sources">
+              <Component Guid="9FF24228C60C11E697B20800279976C8" Id="locale_component1">
+                <File Checksum="yes" Id="locale_file1" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\af.po"/>
+              </Component>
+              <Component Guid="9FF4F358C60C11E69C620800279976C8" Id="locale_component2">
+                <File Checksum="yes" Id="locale_file2" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\da.po"/>
+              </Component>
+              <Component Guid="9FF4F359C60C11E6A5F90800279976C8" Id="locale_component3">
+                <File Checksum="yes" Id="locale_file3" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\de.po"/>
+              </Component>
+              <Component Guid="9FF4F35AC60C11E696020800279976C8" Id="locale_component4">
+                <File Checksum="yes" Id="locale_file4" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\el.po"/>
+              </Component>
+              <Component Guid="9FF4F35BC60C11E687F80800279976C8" Id="locale_component5">
+                <File Checksum="yes" Id="locale_file5" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\en_AU.po"/>
+              </Component>
+              <Component Guid="9FF4F35CC60C11E6A3EC0800279976C8" Id="locale_component6">
+                <File Checksum="yes" Id="locale_file6" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\en_GB.po"/>
+              </Component>
+              <Component Guid="9FF4F35DC60C11E69B310800279976C8" Id="locale_component7">
+                <File Checksum="yes" Id="locale_file7" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\es.po"/>
+              </Component>
+              <Component Guid="9FF4F35EC60C11E686760800279976C8" Id="locale_component8">
+                <File Checksum="yes" Id="locale_file8" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\fr.po"/>
+              </Component>
+              <Component Guid="9FF4F35FC60C11E684040800279976C8" Id="locale_component9">
+                <File Checksum="yes" Id="locale_file9" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\hu.po"/>
+              </Component>
+              <Component Guid="9FF4F360C60C11E6950F0800279976C8" Id="locale_component10">
+                <File Checksum="yes" Id="locale_file10" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\id.po"/>
+              </Component>
+              <Component Guid="9FF4F361C60C11E690960800279976C8" Id="locale_component11">
+                <File Checksum="yes" Id="locale_file11" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\it.po"/>
+              </Component>
+              <Component Guid="9FF4F362C60C11E6A5E00800279976C8" Id="locale_component12">
+                <File Checksum="yes" Id="locale_file12" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\messages.pot"/>
+              </Component>
+              <Component Guid="9FF4F363C60C11E6A2AA0800279976C8" Id="locale_component13">
+                <File Checksum="yes" Id="locale_file13" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\oc.po"/>
+              </Component>
+              <Component Guid="9FF4F364C60C11E68B5F0800279976C8" Id="locale_component14">
+                <File Checksum="yes" Id="locale_file14" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\pl.po"/>
+              </Component>
+              <Component Guid="9FF4F365C60C11E689730800279976C8" Id="locale_component15">
+                <File Checksum="yes" Id="locale_file15" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\pt.po"/>
+              </Component>
+              <Component Guid="9FF4F366C60C11E6AE4F0800279976C8" Id="locale_component16">
+                <File Checksum="yes" Id="locale_file16" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\ro.po"/>
+              </Component>
+              <Component Guid="9FF4F367C60C11E6ADCC0800279976C8" Id="locale_component17">
+                <File Checksum="yes" Id="locale_file17" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\sk.po"/>
+              </Component>
+              <Component Guid="9FF4F368C60C11E6AFD10800279976C8" Id="locale_component18">
+                <File Checksum="yes" Id="locale_file18" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\locale\tr.po"/>
+              </Component>
+            </Directory>
           </Directory>
           <Directory Id="ResourcesDIR" Name="resources">
-            <Component Guid="D94E10EC115011E6AFBA0800279976C8" Id="resource_component1">
-              <File Checksum="yes" Id="resource_file1" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\appointment_shortcuts.xml"/>
+            <Component Guid="9FF4F369C60C11E6BEE20800279976C8" Id="resource_component1">
+              <File Checksum="yes" Id="resource_file1" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\appointment_shortcuts.xml"/>
             </Component>
-            <Component Guid="D94E10ED115011E6B7650800279976C8" Id="resource_component2">
-              <File Checksum="yes" Id="resource_file2" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\appt_ov.png"/>
+            <Component Guid="9FF4F36AC60C11E68B9D0800279976C8" Id="resource_component2">
+              <File Checksum="yes" Id="resource_file2" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\appt_ov.png"/>
             </Component>
-            <Component Guid="D94E10EE115011E6AE190800279976C8" Id="resource_component3">
-              <File Checksum="yes" Id="resource_file3" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\hdp.png"/>
+            <Component Guid="9FF4F36BC60C11E694F00800279976C8" Id="resource_component3">
+              <File Checksum="yes" Id="resource_file3" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\demo_data.sql"/>
             </Component>
-            <Component Guid="D94E10EF115011E6887A0800279976C8" Id="resource_component4">
-              <File Checksum="yes" Id="resource_file4" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\hdp_small.png"/>
+            <Component Guid="9FF4F36CC60C11E6B4FB0800279976C8" Id="resource_component4">
+              <File Checksum="yes" Id="resource_file4" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\hdp_maintenance.png"/>
             </Component>
-            <Component Guid="D94E10F0115011E6A60B0800279976C8" Id="resource_component5">
-              <File Checksum="yes" Id="resource_file5" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\logo.png"/>
+            <Component Guid="9FF4F36DC60C11E68CC40800279976C8" Id="resource_component5">
+              <File Checksum="yes" Id="resource_file5" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\hdp_small.png"/>
             </Component>
-            <Component Guid="D94E10F1115011E69B730800279976C8" Id="resource_component6">
-              <File Checksum="yes" Id="resource_file6" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\logo1.png"/>
+            <Component Guid="9FF4F36EC60C11E6A0F10800279976C8" Id="resource_component6">
+              <File Checksum="yes" Id="resource_file6" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\logo.png"/>
             </Component>
-            <Component Guid="D94E10F2115011E6B0460800279976C8" Id="resource_component7">
-              <File Checksum="yes" Id="resource_file7" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\newlogo.png"/>
+            <Component Guid="9FF4F36FC60C11E6834A0800279976C8" Id="resource_component7">
+              <File Checksum="yes" Id="resource_file7" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\logo1.png"/>
             </Component>
-            <Component Guid="D94E10F3115011E6B31C0800279976C8" Id="resource_component8">
-              <File Checksum="yes" Id="resource_file8" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\newlogo_launchpadSize.png"/>
+            <Component Guid="9FF4F370C60C11E695A10800279976C8" Id="resource_component8">
+              <File Checksum="yes" Id="resource_file8" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\minimal_data.sql"/>
             </Component>
-            <Component Guid="D94E10F4115011E6A1CF0800279976C8" Id="resource_component9">
-              <File Checksum="yes" Id="resource_file9" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\nhs_scot.png"/>
+            <Component Guid="9FF4F371C60C11E6B5D90800279976C8" Id="resource_component9">
+              <File Checksum="yes" Id="resource_file9" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\newlogo.png"/>
             </Component>
-            <Component Guid="D94E10F5115011E689C80800279976C8" Id="resource_component10">
-              <File Checksum="yes" Id="resource_file10" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\openmolar.svg"/>
+            <Component Guid="9FF4F372C60C11E6BA5F0800279976C8" Id="resource_component10">
+              <File Checksum="yes" Id="resource_file10" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\newlogo_launchpadSize.png"/>
             </Component>
-            <Component Guid="D94E10F6115011E69B840800279976C8" Id="resource_component11">
-              <File Checksum="yes" Id="resource_file11" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\private.png"/>
+            <Component Guid="9FF4F373C60C11E68E9E0800279976C8" Id="resource_component11">
+              <File Checksum="yes" Id="resource_file11" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\nhs_scot.png"/>
             </Component>
-            <Component Guid="D94E10F7115011E680540800279976C8" Id="resource_component12">
-              <File Checksum="yes" Id="resource_file12" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\resources.qrc"/>
+            <Component Guid="9FF4F374C60C11E690850800279976C8" Id="resource_component12">
+              <File Checksum="yes" Id="resource_file12" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\openmolar.svg"/>
             </Component>
-            <Component Guid="D94E10F8115011E6B5290800279976C8" Id="resource_component13">
-              <File Checksum="yes" Id="resource_file13" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\schema.sql"/>
+            <Component Guid="9FF4F375C60C11E684DF0800279976C8" Id="resource_component13">
+              <File Checksum="yes" Id="resource_file13" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\private.png"/>
             </Component>
-            <Component Guid="D94E10F9115011E680750800279976C8" Id="resource_component14">
-              <File Checksum="yes" Id="resource_file14" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\style.css"/>
+            <Component Guid="9FF4F376C60C11E6A68B0800279976C8" Id="resource_component14">
+              <File Checksum="yes" Id="resource_file14" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\resources.qrc"/>
+            </Component>
+            <Component Guid="9FF4F377C60C11E680140800279976C8" Id="resource_component15">
+              <File Checksum="yes" Id="resource_file15" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\schema.sql"/>
+            </Component>
+            <Component Guid="9FF4F378C60C11E694540800279976C8" Id="resource_component16">
+              <File Checksum="yes" Id="resource_file16" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\style.css"/>
+            </Component>
+            <Component Guid="9FF4F379C60C11E6A0540800279976C8" Id="resource_component17">
+              <File Checksum="yes" Id="resource_file17" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\triggers.sql"/>
+            </Component>
+            <Component Guid="9FF4F37AC60C11E68A820800279976C8" Id="resource_component18">
+              <File Checksum="yes" Id="resource_file18" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\win_install_banner.bmp"/>
+            </Component>
+            <Component Guid="9FF4F37BC60C11E6AB240800279976C8" Id="resource_component19">
+              <File Checksum="yes" Id="resource_file19" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\win_install_dialog.bmp"/>
             </Component>
             <Directory Id="resource_folder2" Name="feescales">
-              <Component Guid="D94E10FA115011E697E70800279976C8" Id="resource_component15">
-                <File Checksum="yes" Id="resource_file15" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\feescales\example_feescale.xml"/>
+              <Component Guid="9FF4F37CC60C11E68B1A0800279976C8" Id="resource_component20">
+                <File Checksum="yes" Id="resource_file20" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\feescales\example_feescale.xml"/>
               </Component>
-              <Component Guid="D94E10FB115011E683460800279976C8" Id="resource_component16">
-                <File Checksum="yes" Id="resource_file16" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\feescales\feescale_schema.xsd"/>
+              <Component Guid="9FF4F37DC60C11E6BC650800279976C8" Id="resource_component21">
+                <File Checksum="yes" Id="resource_file21" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\feescales\feescale_schema.xsd"/>
               </Component>
             </Directory>
             <Directory Id="resource_folder3" Name="gp17">
-              <Component Guid="D94E10FC115011E690F00800279976C8" Id="resource_component17">
-                <File Checksum="yes" Id="resource_file17" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\gp17\back.jpg"/>
+              <Component Guid="9FF4F37EC60C11E69A4E0800279976C8" Id="resource_component22">
+                <File Checksum="yes" Id="resource_file22" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\gp17\back.jpg"/>
               </Component>
-              <Component Guid="D94E10FD115011E6B68F0800279976C8" Id="resource_component18">
-                <File Checksum="yes" Id="resource_file18" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\gp17\front.jpg"/>
+              <Component Guid="9FF4F37FC60C11E6A04D0800279976C8" Id="resource_component23">
+                <File Checksum="yes" Id="resource_file23" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\gp17\front.jpg"/>
               </Component>
             </Directory>
             <Directory Id="resource_folder4" Name="gp17-1">
-              <Component Guid="D94E10FE115011E688440800279976C8" Id="resource_component19">
-                <File Checksum="yes" Id="resource_file19" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\gp17-1\back.png"/>
+              <Component Guid="9FF4F380C60C11E6A70E0800279976C8" Id="resource_component24">
+                <File Checksum="yes" Id="resource_file24" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\gp17-1\back.png"/>
               </Component>
-              <Component Guid="D94E10FF115011E6BE4A0800279976C8" Id="resource_component20">
-                <File Checksum="yes" Id="resource_file20" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\gp17-1\front.png"/>
+              <Component Guid="9FF4F381C60C11E6811F0800279976C8" Id="resource_component25">
+                <File Checksum="yes" Id="resource_file25" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\gp17-1\front.png"/>
               </Component>
             </Directory>
             <Directory Id="resource_folder5" Name="icons">
-              <Component Guid="D94E1100115011E68CC80800279976C8" Id="resource_component21">
-                <File Checksum="yes" Id="resource_file21" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\Speaker_Icon.svg"/>
+              <Component Guid="9FF4F382C60C11E689DE0800279976C8" Id="resource_component26">
+                <File Checksum="yes" Id="resource_file26" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\Speaker_Icon.svg"/>
               </Component>
-              <Component Guid="D94E1101115011E6A6560800279976C8" Id="resource_component22">
-                <File Checksum="yes" Id="resource_file22" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\action.png"/>
+              <Component Guid="9FF4F383C60C11E6A6D20800279976C8" Id="resource_component27">
+                <File Checksum="yes" Id="resource_file27" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\action.png"/>
               </Component>
-              <Component Guid="D94E1102115011E6B2680800279976C8" Id="resource_component23">
-                <File Checksum="yes" Id="resource_file23" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\add_user.png"/>
+              <Component Guid="9FF4F384C60C11E692590800279976C8" Id="resource_component28">
+                <File Checksum="yes" Id="resource_file28" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\add_user.png"/>
               </Component>
-              <Component Guid="D94E1103115011E687E10800279976C8" Id="resource_component24">
-                <File Checksum="yes" Id="resource_file24" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\agt_back.png"/>
+              <Component Guid="9FF4F385C60C11E6B0F00800279976C8" Id="resource_component29">
+                <File Checksum="yes" Id="resource_file29" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\agt_back.png"/>
               </Component>
-              <Component Guid="D94E1104115011E6B52E0800279976C8" Id="resource_component25">
-                <File Checksum="yes" Id="resource_file25" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\agt_family.png"/>
+              <Component Guid="9FF4F386C60C11E69DBB0800279976C8" Id="resource_component30">
+                <File Checksum="yes" Id="resource_file30" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\agt_family.png"/>
               </Component>
-              <Component Guid="D94E1105115011E6A86C0800279976C8" Id="resource_component26">
-                <File Checksum="yes" Id="resource_file26" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\agt_forward.png"/>
+              <Component Guid="9FF4F387C60C11E69C070800279976C8" Id="resource_component31">
+                <File Checksum="yes" Id="resource_file31" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\agt_forward.png"/>
               </Component>
-              <Component Guid="D94E1106115011E69B1E0800279976C8" Id="resource_component27">
-                <File Checksum="yes" Id="resource_file27" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\agt_home.png"/>
+              <Component Guid="9FF4F388C60C11E686860800279976C8" Id="resource_component32">
+                <File Checksum="yes" Id="resource_file32" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\agt_home.png"/>
               </Component>
-              <Component Guid="D94E1107115011E683090800279976C8" Id="resource_component28">
-                <File Checksum="yes" Id="resource_file28" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\agt_reload.png"/>
+              <Component Guid="9FF4F389C60C11E6936E0800279976C8" Id="resource_component33">
+                <File Checksum="yes" Id="resource_file33" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\agt_reload.png"/>
               </Component>
-              <Component Guid="D94E1108115011E69A5E0800279976C8" Id="resource_component29">
-                <File Checksum="yes" Id="resource_file29" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\alert.png"/>
+              <Component Guid="9FF4F38AC60C11E6ACE40800279976C8" Id="resource_component34">
+                <File Checksum="yes" Id="resource_file34" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\alert.png"/>
               </Component>
-              <Component Guid="D94E1109115011E68A630800279976C8" Id="resource_component30">
-                <File Checksum="yes" Id="resource_file30" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\back.png"/>
+              <Component Guid="9FF4F38BC60C11E6BFE20800279976C8" Id="resource_component35">
+                <File Checksum="yes" Id="resource_file35" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\back.png"/>
               </Component>
-              <Component Guid="D94E110A115011E6AD890800279976C8" Id="resource_component31">
-                <File Checksum="yes" Id="resource_file31" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\button_ok.png"/>
+              <Component Guid="9FF4F38CC60C11E68E7E0800279976C8" Id="resource_component36">
+                <File Checksum="yes" Id="resource_file36" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\button_ok.png"/>
               </Component>
-              <Component Guid="D94E110B115011E697E30800279976C8" Id="resource_component32">
-                <File Checksum="yes" Id="resource_file32" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\chain-broken.png"/>
+              <Component Guid="9FF4F38DC60C11E6ACCE0800279976C8" Id="resource_component37">
+                <File Checksum="yes" Id="resource_file37" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\chain-broken.png"/>
               </Component>
-              <Component Guid="D94E110C115011E6833A0800279976C8" Id="resource_component33">
-                <File Checksum="yes" Id="resource_file33" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\chain.png"/>
+              <Component Guid="9FF4F38EC60C11E682BB0800279976C8" Id="resource_component38">
+                <File Checksum="yes" Id="resource_file38" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\chain.png"/>
               </Component>
-              <Component Guid="D94E110D115011E6BB360800279976C8" Id="resource_component34">
-                <File Checksum="yes" Id="resource_file34" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\contract.svg"/>
+              <Component Guid="9FF4F38FC60C11E696EB0800279976C8" Id="resource_component39">
+                <File Checksum="yes" Id="resource_file39" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\contract.svg"/>
               </Component>
-              <Component Guid="D94E110E115011E6A8230800279976C8" Id="resource_component35">
-                <File Checksum="yes" Id="resource_file35" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\database.png"/>
+              <Component Guid="9FF4F390C60C11E6BD890800279976C8" Id="resource_component40">
+                <File Checksum="yes" Id="resource_file40" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\database.png"/>
               </Component>
-              <Component Guid="D94E110F115011E6BBE80800279976C8" Id="resource_component36">
-                <File Checksum="yes" Id="resource_file36" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\down.png"/>
+              <Component Guid="9FF4F391C60C11E6B2510800279976C8" Id="resource_component41">
+                <File Checksum="yes" Id="resource_file41" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\down.png"/>
               </Component>
-              <Component Guid="D94E1110115011E681EC0800279976C8" Id="resource_component37">
-                <File Checksum="yes" Id="resource_file37" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\eraser.png"/>
+              <Component Guid="9FF4F392C60C11E69C170800279976C8" Id="resource_component42">
+                <File Checksum="yes" Id="resource_file42" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\eraser.png"/>
               </Component>
-              <Component Guid="D94E1111115011E6B57F0800279976C8" Id="resource_component38">
-                <File Checksum="yes" Id="resource_file38" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\exit.png"/>
+              <Component Guid="9FF4F393C60C11E6A38C0800279976C8" Id="resource_component43">
+                <File Checksum="yes" Id="resource_file43" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\exit.png"/>
               </Component>
-              <Component Guid="D94E1112115011E6835B0800279976C8" Id="resource_component39">
-                <File Checksum="yes" Id="resource_file39" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\expand.svg"/>
+              <Component Guid="9FF4F394C60C11E6AFFD0800279976C8" Id="resource_component44">
+                <File Checksum="yes" Id="resource_file44" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\expand.svg"/>
               </Component>
-              <Component Guid="D94E1113115011E698480800279976C8" Id="resource_component40">
-                <File Checksum="yes" Id="resource_file40" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\gohome.png"/>
+              <Component Guid="9FF4F395C60C11E691050800279976C8" Id="resource_component45">
+                <File Checksum="yes" Id="resource_file45" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\gohome.png"/>
               </Component>
-              <Component Guid="D94E1114115011E68F270800279976C8" Id="resource_component41">
-                <File Checksum="yes" Id="resource_file41" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\home.png"/>
+              <Component Guid="9FF4F396C60C11E691B90800279976C8" Id="resource_component46">
+                <File Checksum="yes" Id="resource_file46" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\home.png"/>
               </Component>
-              <Component Guid="D94E1115115011E6A9690800279976C8" Id="resource_component42">
-                <File Checksum="yes" Id="resource_file42" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\kaddressbook.png"/>
+              <Component Guid="9FF4F397C60C11E6998C0800279976C8" Id="resource_component47">
+                <File Checksum="yes" Id="resource_file47" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\kaddressbook.png"/>
               </Component>
-              <Component Guid="D94E1116115011E6A97F0800279976C8" Id="resource_component43">
-                <File Checksum="yes" Id="resource_file43" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\karm.png"/>
+              <Component Guid="9FF4F398C60C11E6AE040800279976C8" Id="resource_component48">
+                <File Checksum="yes" Id="resource_file48" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\karm.png"/>
               </Component>
-              <Component Guid="D94E1117115011E681630800279976C8" Id="resource_component44">
-                <File Checksum="yes" Id="resource_file44" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\kdmconfig.png"/>
+              <Component Guid="9FF4F399C60C11E69EA30800279976C8" Id="resource_component49">
+                <File Checksum="yes" Id="resource_file49" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\kdmconfig.png"/>
               </Component>
-              <Component Guid="D94E1118115011E6B0690800279976C8" Id="resource_component45">
-                <File Checksum="yes" Id="resource_file45" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\kfm.png"/>
+              <Component Guid="9FF4F39AC60C11E6A2CD0800279976C8" Id="resource_component50">
+                <File Checksum="yes" Id="resource_file50" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\kfm.png"/>
               </Component>
-              <Component Guid="D94E1119115011E6AB2B0800279976C8" Id="resource_component46">
-                <File Checksum="yes" Id="resource_file46" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\kfm_home.png"/>
+              <Component Guid="9FF4F39BC60C11E6A37D0800279976C8" Id="resource_component51">
+                <File Checksum="yes" Id="resource_file51" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\kfm_home.png"/>
               </Component>
-              <Component Guid="D94E111A115011E689630800279976C8" Id="resource_component47">
-                <File Checksum="yes" Id="resource_file47" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\logo.png"/>
+              <Component Guid="9FF4F39CC60C11E699250800279976C8" Id="resource_component52">
+                <File Checksum="yes" Id="resource_file52" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\logo.png"/>
               </Component>
-              <Component Guid="D94E111B115011E6A5530800279976C8" Id="resource_component48">
-                <File Checksum="yes" Id="resource_file48" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\lower_implant.svg"/>
+              <Component Guid="9FF4F39DC60C11E68C2F0800279976C8" Id="resource_component53">
+                <File Checksum="yes" Id="resource_file53" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\lower_implant.svg"/>
               </Component>
-              <Component Guid="D94E111C115011E6BC460800279976C8" Id="resource_component49">
-                <File Checksum="yes" Id="resource_file49" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\mail_new.png"/>
+              <Component Guid="9FF4F39EC60C11E684820800279976C8" Id="resource_component54">
+                <File Checksum="yes" Id="resource_file54" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\mail_new.png"/>
               </Component>
-              <Component Guid="D94E111D115011E6BF770800279976C8" Id="resource_component50">
-                <File Checksum="yes" Id="resource_file50" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\med.png"/>
+              <Component Guid="9FF4F39FC60C11E6BB4F0800279976C8" Id="resource_component55">
+                <File Checksum="yes" Id="resource_file55" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\med.png"/>
               </Component>
-              <Component Guid="D94E111E115011E690270800279976C8" Id="resource_component51">
-                <File Checksum="yes" Id="resource_file51" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\memos.png"/>
+              <Component Guid="9FF4F3A0C60C11E694CD0800279976C8" Id="resource_component56">
+                <File Checksum="yes" Id="resource_file56" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\memos.png"/>
               </Component>
-              <Component Guid="D94E111F115011E687920800279976C8" Id="resource_component52">
-                <File Checksum="yes" Id="resource_file52" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\month.png"/>
+              <Component Guid="9FF4F3A1C60C11E6A4120800279976C8" Id="resource_component57">
+                <File Checksum="yes" Id="resource_file57" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\month.png"/>
               </Component>
-              <Component Guid="D94E1120115011E6B01D0800279976C8" Id="resource_component53">
-                <File Checksum="yes" Id="resource_file53" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\number1.png"/>
+              <Component Guid="9FF4F3A2C60C11E69E8C0800279976C8" Id="resource_component58">
+                <File Checksum="yes" Id="resource_file58" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\number1.png"/>
               </Component>
-              <Component Guid="D94E1121115011E6A62A0800279976C8" Id="resource_component54">
-                <File Checksum="yes" Id="resource_file54" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\openmolar.ico"/>
+              <Component Guid="9FF4F3A3C60C11E6BC7E0800279976C8" Id="resource_component59">
+                <File Checksum="yes" Id="resource_file59" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\openmolar.ico"/>
               </Component>
-              <Component Guid="D94E1122115011E699640800279976C8" Id="resource_component55">
-                <File Checksum="yes" Id="resource_file55" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\pencil.png"/>
+              <Component Guid="9FF4F3A4C60C11E6A9790800279976C8" Id="resource_component60">
+                <File Checksum="yes" Id="resource_file60" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\pencil.png"/>
               </Component>
-              <Component Guid="D94E1123115011E69DCB0800279976C8" Id="resource_component56">
-                <File Checksum="yes" Id="resource_file56" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\pin.png"/>
+              <Component Guid="9FF4F3A5C60C11E68BAB0800279976C8" Id="resource_component61">
+                <File Checksum="yes" Id="resource_file61" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\pin.png"/>
               </Component>
-              <Component Guid="D94E1124115011E68D170800279976C8" Id="resource_component57">
-                <File Checksum="yes" Id="resource_file57" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\ps.png"/>
+              <Component Guid="9FF4F3A6C60C11E6A13A0800279976C8" Id="resource_component62">
+                <File Checksum="yes" Id="resource_file62" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\ps.png"/>
               </Component>
-              <Component Guid="D94E1125115011E6A48B0800279976C8" Id="resource_component58">
-                <File Checksum="yes" Id="resource_file58" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\save_all.png"/>
+              <Component Guid="9FF4F3A7C60C11E6B5910800279976C8" Id="resource_component63">
+                <File Checksum="yes" Id="resource_file63" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\save_all.png"/>
               </Component>
-              <Component Guid="D94E1126115011E6AFB10800279976C8" Id="resource_component59">
-                <File Checksum="yes" Id="resource_file59" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\schedule.png"/>
+              <Component Guid="9FF4F3A8C60C11E6BBFC0800279976C8" Id="resource_component64">
+                <File Checksum="yes" Id="resource_file64" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\schedule.png"/>
               </Component>
-              <Component Guid="D94E1127115011E68CC10800279976C8" Id="resource_component60">
-                <File Checksum="yes" Id="resource_file60" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\schedule_active.png"/>
+              <Component Guid="9FF4F3A9C60C11E6B1620800279976C8" Id="resource_component65">
+                <File Checksum="yes" Id="resource_file65" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\schedule_active.png"/>
               </Component>
-              <Component Guid="D94E1128115011E692AB0800279976C8" Id="resource_component61">
-                <File Checksum="yes" Id="resource_file61" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\search.png"/>
+              <Component Guid="9FF4F3AAC60C11E69D2B0800279976C8" Id="resource_component66">
+                <File Checksum="yes" Id="resource_file66" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\search.png"/>
               </Component>
-              <Component Guid="D94E1129115011E68F380800279976C8" Id="resource_component62">
-                <File Checksum="yes" Id="resource_file62" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\separate.png"/>
+              <Component Guid="9FF4F3ABC60C11E691D70800279976C8" Id="resource_component67">
+                <File Checksum="yes" Id="resource_file67" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\separate.png"/>
               </Component>
-              <Component Guid="D94E112A115011E690A80800279976C8" Id="resource_component63">
-                <File Checksum="yes" Id="resource_file63" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\settings.png"/>
+              <Component Guid="9FF4F3ACC60C11E68EA10800279976C8" Id="resource_component68">
+                <File Checksum="yes" Id="resource_file68" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\settings.png"/>
               </Component>
-              <Component Guid="D94E112B115011E6A1E40800279976C8" Id="resource_component64">
-                <File Checksum="yes" Id="resource_file64" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\txt.png"/>
+              <Component Guid="9FF4F3ADC60C11E694210800279976C8" Id="resource_component69">
+                <File Checksum="yes" Id="resource_file69" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\txt.png"/>
               </Component>
-              <Component Guid="D94E112C115011E68BF90800279976C8" Id="resource_component65">
-                <File Checksum="yes" Id="resource_file65" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\up.png"/>
+              <Component Guid="9FF4F3AEC60C11E68A360800279976C8" Id="resource_component70">
+                <File Checksum="yes" Id="resource_file70" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\up.png"/>
               </Component>
-              <Component Guid="D94E112D115011E6877C0800279976C8" Id="resource_component66">
-                <File Checksum="yes" Id="resource_file66" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\upper_implant.svg"/>
+              <Component Guid="9FF4F3AFC60C11E6A5290800279976C8" Id="resource_component71">
+                <File Checksum="yes" Id="resource_file71" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\upper_implant.svg"/>
               </Component>
-              <Component Guid="D94E112E115011E6BD1B0800279976C8" Id="resource_component67">
-                <File Checksum="yes" Id="resource_file67" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\vcalendar.png"/>
+              <Component Guid="9FF4F3B0C60C11E698C40800279976C8" Id="resource_component72">
+                <File Checksum="yes" Id="resource_file72" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\vcalendar.png"/>
               </Component>
-              <Component Guid="D94E112F115011E69EFF0800279976C8" Id="resource_component68">
-                <File Checksum="yes" Id="resource_file68" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\vcard.png"/>
+              <Component Guid="9FF4F3B1C60C11E68E190800279976C8" Id="resource_component73">
+                <File Checksum="yes" Id="resource_file73" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\vcard.png"/>
               </Component>
-              <Component Guid="D94E1130115011E6B6820800279976C8" Id="resource_component69">
-                <File Checksum="yes" Id="resource_file69" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\warning.png"/>
+              <Component Guid="9FF4F3B2C60C11E6BD1B0800279976C8" Id="resource_component74">
+                <File Checksum="yes" Id="resource_file74" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\warning.png"/>
               </Component>
-              <Component Guid="D94E1131115011E6A71B0800279976C8" Id="resource_component70">
-                <File Checksum="yes" Id="resource_file70" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\widelogo.png"/>
+              <Component Guid="9FF4F3B3C60C11E69F8E0800279976C8" Id="resource_component75">
+                <File Checksum="yes" Id="resource_file75" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\widelogo.png"/>
               </Component>
-              <Component Guid="D94E1132115011E6AA660800279976C8" Id="resource_component71">
-                <File Checksum="yes" Id="resource_file71" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\icons\wikipedia.png"/>
+              <Component Guid="9FF4F3B4C60C11E6B0260800279976C8" Id="resource_component76">
+                <File Checksum="yes" Id="resource_file76" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\icons\wikipedia.png"/>
               </Component>
             </Directory>
             <Directory Id="resource_folder6" Name="phrasebook">
-              <Component Guid="D94E1133115011E6B92D0800279976C8" Id="resource_component72">
-                <File Checksum="yes" Id="resource_file72" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\phrasebook\phrasebook.xsd"/>
+              <Component Guid="9FF4F3B5C60C11E682A20800279976C8" Id="resource_component77">
+                <File Checksum="yes" Id="resource_file77" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\phrasebook\phrasebook.xsd"/>
               </Component>
             </Directory>
             <Directory Id="resource_folder7" Name="teeth">
-              <Component Guid="D94E1134115011E68D0F0800279976C8" Id="resource_component73">
-                <File Checksum="yes" Id="resource_file73" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll1.png"/>
+              <Component Guid="9FF4F3B6C60C11E6AD000800279976C8" Id="resource_component78">
+                <File Checksum="yes" Id="resource_file78" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll1.png"/>
               </Component>
-              <Component Guid="D94E1135115011E6A4BD0800279976C8" Id="resource_component74">
-                <File Checksum="yes" Id="resource_file74" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll2.png"/>
+              <Component Guid="9FF4F3B7C60C11E69D860800279976C8" Id="resource_component79">
+                <File Checksum="yes" Id="resource_file79" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll2.png"/>
               </Component>
-              <Component Guid="D94E1136115011E6BD7E0800279976C8" Id="resource_component75">
-                <File Checksum="yes" Id="resource_file75" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll3.png"/>
+              <Component Guid="9FF4F3B8C60C11E6B29E0800279976C8" Id="resource_component80">
+                <File Checksum="yes" Id="resource_file80" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll3.png"/>
               </Component>
-              <Component Guid="D94E1137115011E693A10800279976C8" Id="resource_component76">
-                <File Checksum="yes" Id="resource_file76" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll4.png"/>
+              <Component Guid="9FF4F3B9C60C11E6A07E0800279976C8" Id="resource_component81">
+                <File Checksum="yes" Id="resource_file81" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll4.png"/>
               </Component>
-              <Component Guid="D94E1138115011E683A30800279976C8" Id="resource_component77">
-                <File Checksum="yes" Id="resource_file77" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll5.png"/>
+              <Component Guid="9FF4F3BAC60C11E6A3FA0800279976C8" Id="resource_component82">
+                <File Checksum="yes" Id="resource_file82" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll5.png"/>
               </Component>
-              <Component Guid="D94E1139115011E6AF730800279976C8" Id="resource_component78">
-                <File Checksum="yes" Id="resource_file78" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll6.png"/>
+              <Component Guid="9FF4F3BBC60C11E697320800279976C8" Id="resource_component83">
+                <File Checksum="yes" Id="resource_file83" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll6.png"/>
               </Component>
-              <Component Guid="D94E113A115011E6BE1B0800279976C8" Id="resource_component79">
-                <File Checksum="yes" Id="resource_file79" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll7.png"/>
+              <Component Guid="9FF4F3BCC60C11E6B7D00800279976C8" Id="resource_component84">
+                <File Checksum="yes" Id="resource_file84" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll7.png"/>
               </Component>
-              <Component Guid="D94E113B115011E6BCE30800279976C8" Id="resource_component80">
-                <File Checksum="yes" Id="resource_file80" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ll8.png"/>
+              <Component Guid="9FF4F3BDC60C11E69D240800279976C8" Id="resource_component85">
+                <File Checksum="yes" Id="resource_file85" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ll8.png"/>
               </Component>
-              <Component Guid="D94E113C115011E6A8F10800279976C8" Id="resource_component81">
-                <File Checksum="yes" Id="resource_file81" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr1.png"/>
+              <Component Guid="9FF4F3BEC60C11E693E80800279976C8" Id="resource_component86">
+                <File Checksum="yes" Id="resource_file86" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr1.png"/>
               </Component>
-              <Component Guid="D94E113D115011E69A200800279976C8" Id="resource_component82">
-                <File Checksum="yes" Id="resource_file82" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr2.png"/>
+              <Component Guid="9FF4F3BFC60C11E694B80800279976C8" Id="resource_component87">
+                <File Checksum="yes" Id="resource_file87" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr2.png"/>
               </Component>
-              <Component Guid="D94E113E115011E68D5A0800279976C8" Id="resource_component83">
-                <File Checksum="yes" Id="resource_file83" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr3.png"/>
+              <Component Guid="9FF4F3C0C60C11E6B0F90800279976C8" Id="resource_component88">
+                <File Checksum="yes" Id="resource_file88" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr3.png"/>
               </Component>
-              <Component Guid="D94E113F115011E6AD6B0800279976C8" Id="resource_component84">
-                <File Checksum="yes" Id="resource_file84" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr4.png"/>
+              <Component Guid="9FF4F3C1C60C11E6ADBB0800279976C8" Id="resource_component89">
+                <File Checksum="yes" Id="resource_file89" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr4.png"/>
               </Component>
-              <Component Guid="D94E1140115011E6A0CB0800279976C8" Id="resource_component85">
-                <File Checksum="yes" Id="resource_file85" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr5.png"/>
+              <Component Guid="9FF4F3C2C60C11E691280800279976C8" Id="resource_component90">
+                <File Checksum="yes" Id="resource_file90" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr5.png"/>
               </Component>
-              <Component Guid="D94E1141115011E6A34D0800279976C8" Id="resource_component86">
-                <File Checksum="yes" Id="resource_file86" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr6.png"/>
+              <Component Guid="9FF4F3C3C60C11E684670800279976C8" Id="resource_component91">
+                <File Checksum="yes" Id="resource_file91" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr6.png"/>
               </Component>
-              <Component Guid="D94E1142115011E682680800279976C8" Id="resource_component87">
-                <File Checksum="yes" Id="resource_file87" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr7.png"/>
+              <Component Guid="9FF4F3C4C60C11E68BE30800279976C8" Id="resource_component92">
+                <File Checksum="yes" Id="resource_file92" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr7.png"/>
               </Component>
-              <Component Guid="D94E1143115011E6B51B0800279976C8" Id="resource_component88">
-                <File Checksum="yes" Id="resource_file88" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\lr8.png"/>
+              <Component Guid="9FF4F3C5C60C11E6A8BF0800279976C8" Id="resource_component93">
+                <File Checksum="yes" Id="resource_file93" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\lr8.png"/>
               </Component>
-              <Component Guid="D94E1144115011E6B0500800279976C8" Id="resource_component89">
-                <File Checksum="yes" Id="resource_file89" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul1.png"/>
+              <Component Guid="9FF4F3C6C60C11E6B99C0800279976C8" Id="resource_component94">
+                <File Checksum="yes" Id="resource_file94" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul1.png"/>
               </Component>
-              <Component Guid="D94E1145115011E6A7A30800279976C8" Id="resource_component90">
-                <File Checksum="yes" Id="resource_file90" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul2.png"/>
+              <Component Guid="9FF4F3C7C60C11E689450800279976C8" Id="resource_component95">
+                <File Checksum="yes" Id="resource_file95" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul2.png"/>
               </Component>
-              <Component Guid="D94E1146115011E681C40800279976C8" Id="resource_component91">
-                <File Checksum="yes" Id="resource_file91" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul3.png"/>
+              <Component Guid="9FF4F3C8C60C11E699E70800279976C8" Id="resource_component96">
+                <File Checksum="yes" Id="resource_file96" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul3.png"/>
               </Component>
-              <Component Guid="D94E1147115011E68A320800279976C8" Id="resource_component92">
-                <File Checksum="yes" Id="resource_file92" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul4.png"/>
+              <Component Guid="9FF4F3C9C60C11E689500800279976C8" Id="resource_component97">
+                <File Checksum="yes" Id="resource_file97" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul4.png"/>
               </Component>
-              <Component Guid="D94E1148115011E6AAC40800279976C8" Id="resource_component93">
-                <File Checksum="yes" Id="resource_file93" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul5.png"/>
+              <Component Guid="9FF4F3CAC60C11E687130800279976C8" Id="resource_component98">
+                <File Checksum="yes" Id="resource_file98" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul5.png"/>
               </Component>
-              <Component Guid="D94E1149115011E6AF710800279976C8" Id="resource_component94">
-                <File Checksum="yes" Id="resource_file94" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul6.png"/>
+              <Component Guid="9FF4F3CBC60C11E6AE4D0800279976C8" Id="resource_component99">
+                <File Checksum="yes" Id="resource_file99" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul6.png"/>
               </Component>
-              <Component Guid="D94E114A115011E6AC9C0800279976C8" Id="resource_component95">
-                <File Checksum="yes" Id="resource_file95" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul7.png"/>
+              <Component Guid="9FF4F3CCC60C11E68F690800279976C8" Id="resource_component100">
+                <File Checksum="yes" Id="resource_file100" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul7.png"/>
               </Component>
-              <Component Guid="D94E114B115011E6814B0800279976C8" Id="resource_component96">
-                <File Checksum="yes" Id="resource_file96" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ul8.png"/>
+              <Component Guid="9FF4F3CDC60C11E680AF0800279976C8" Id="resource_component101">
+                <File Checksum="yes" Id="resource_file101" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ul8.png"/>
               </Component>
-              <Component Guid="D94E114C115011E6B6DB0800279976C8" Id="resource_component97">
-                <File Checksum="yes" Id="resource_file97" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur1.png"/>
+              <Component Guid="9FF4F3CEC60C11E680CE0800279976C8" Id="resource_component102">
+                <File Checksum="yes" Id="resource_file102" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur1.png"/>
               </Component>
-              <Component Guid="D94E114D115011E6800F0800279976C8" Id="resource_component98">
-                <File Checksum="yes" Id="resource_file98" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur2.png"/>
+              <Component Guid="9FF4F3CFC60C11E6B47B0800279976C8" Id="resource_component103">
+                <File Checksum="yes" Id="resource_file103" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur2.png"/>
               </Component>
-              <Component Guid="D94E114E115011E6A14A0800279976C8" Id="resource_component99">
-                <File Checksum="yes" Id="resource_file99" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur3.png"/>
+              <Component Guid="9FF4F3D0C60C11E682DC0800279976C8" Id="resource_component104">
+                <File Checksum="yes" Id="resource_file104" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur3.png"/>
               </Component>
-              <Component Guid="D94E114F115011E6B6440800279976C8" Id="resource_component100">
-                <File Checksum="yes" Id="resource_file100" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur4.png"/>
+              <Component Guid="9FF4F3D1C60C11E688DA0800279976C8" Id="resource_component105">
+                <File Checksum="yes" Id="resource_file105" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur4.png"/>
               </Component>
-              <Component Guid="D94E1150115011E6B49E0800279976C8" Id="resource_component101">
-                <File Checksum="yes" Id="resource_file101" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur5.png"/>
+              <Component Guid="9FF4F3D2C60C11E690BC0800279976C8" Id="resource_component106">
+                <File Checksum="yes" Id="resource_file106" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur5.png"/>
               </Component>
-              <Component Guid="D94E1151115011E6BE720800279976C8" Id="resource_component102">
-                <File Checksum="yes" Id="resource_file102" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur6.png"/>
+              <Component Guid="9FF4F3D3C60C11E6BE380800279976C8" Id="resource_component107">
+                <File Checksum="yes" Id="resource_file107" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur6.png"/>
               </Component>
-              <Component Guid="D94E1152115011E68B1B0800279976C8" Id="resource_component103">
-                <File Checksum="yes" Id="resource_file103" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur7.png"/>
+              <Component Guid="9FF4F3D4C60C11E683B10800279976C8" Id="resource_component108">
+                <File Checksum="yes" Id="resource_file108" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur7.png"/>
               </Component>
-              <Component Guid="D94E1153115011E6A0B40800279976C8" Id="resource_component104">
-                <File Checksum="yes" Id="resource_file104" KeyPath="yes" Source="E:\openmolar-0.8.0-38-g964eac4-dirty\src\openmolar\resources\teeth\ur8.png"/>
+              <Component Guid="9FF4F3D5C60C11E6A1FA0800279976C8" Id="resource_component109">
+                <File Checksum="yes" Id="resource_file109" KeyPath="yes" Source="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\teeth\ur8.png"/>
               </Component>
             </Directory>
           </Directory>
@@ -547,9 +564,18 @@
       <ComponentRef Id="resource_component102"/>
       <ComponentRef Id="resource_component103"/>
       <ComponentRef Id="resource_component104"/>
+      <ComponentRef Id="resource_component105"/>
+      <ComponentRef Id="resource_component106"/>
+      <ComponentRef Id="resource_component107"/>
+      <ComponentRef Id="resource_component108"/>
+      <ComponentRef Id="resource_component109"/>
     </Feature>
-    <WixVariable Id="WixUIDialogBmp" Value="win_install_dialog.bmp"/>
+    <!-- Define the UI to use - NOTE this requires extra arguments when
+        usng light.exe -->
+    <WixVariable Id="WixUIDialogBmp" Value="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\win_install_dialog.bmp"/>
+    <WixVariable Id="WixUIBannerBmp" Value="E:\openmolar-1.0.16-gb1914a14\src\openmolar\resources\win_install_banner.bmp"/>
     <UIRef Id="WixUI_Minimal"/>
     <UIRef Id="WixUI_ErrorProgressText"/>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Thank you for installing OpenMolar.  Please join the openmolar community and contribute to the documentation, the source code or internationalisation.  Find out more at http://openmolar.com"/>
   </Product>
 </Wix>

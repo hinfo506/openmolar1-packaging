@@ -25,4 +25,4 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=True , icon='C:\\Program Files\\openmolar\\resources\\icons\\openmolar.ico')
+          console=False , icon='C:\\Program Files\\openmolar\\resources\\icons\\openmolar.ico')
