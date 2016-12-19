@@ -1,5 +1,0 @@
-('c:\\python34\\lib\\site-packages\\mysqlclient-1.3.7-py3.4-win32.egg',
- None,
- {'*.py', 'EGG-INFO', '*.pyo', '*.pyd', '*.so', '*.pyc'},
- 'DATA',
- [])
